@@ -31,6 +31,17 @@ spec:
         metadata:
           labels:
             knative: ingressgateway
+      runtime:
+        container:
+          resources:
+            limits:
+              memory: 4Gi
+    egress:
+      runtime:
+        container:
+          resources:
+            limits:
+              memory: 4Gi
   proxy:
     networking:
       trafficControl:

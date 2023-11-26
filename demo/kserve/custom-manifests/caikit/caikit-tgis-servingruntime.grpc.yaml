@@ -26,23 +26,11 @@ spec:
         - name: RUNTIME_LOCAL_MODELS_DIR
           value: /mnt/models
       ports:
-        - containerPort: 8085
+        - containerPort: 8080
           # 8080 for http, 8085 for grpc?
           # https://github.com/opendatahub-io/caikit-tgis-serving/pull/131
-          name: h2c
           protocol: TCP
       # resources: # configure as required
       #   requests:
       #     cpu: 8
       #     memory: 16Gi
-    - name: helper
-      image: quay.io/wangzheng422/debug-pod:alma-9.3
-      securityContext:
-        # privileged: true
-        AllowPrivilegedContainer: true
-      env:
-        - name: key
-          value: value
-      command: 
-        - sleep
-        - infinity
