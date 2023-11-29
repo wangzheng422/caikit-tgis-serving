@@ -16,10 +16,10 @@ spec:
       env:
         - name: TRANSFORMERS_CACHE
           value: /tmp/transformers_cache
-      # resources: # configure as required
-      #   requests:
-      #     cpu: 8
-      #     memory: 16Gi
+      resources: # configure as required
+        requests:
+          cpu: 16
+          memory: 32Gi
     - name: transformer-container
       image: quay.io/opendatahub/caikit-tgis-serving:stable
       env:
@@ -31,10 +31,10 @@ spec:
           # https://github.com/opendatahub-io/caikit-tgis-serving/pull/131
           name: h2c
           protocol: TCP
-      # resources: # configure as required
-      #   requests:
-      #     cpu: 8
-      #     memory: 16Gi
+      resources: # configure as required
+        requests:
+          cpu: 16
+          memory: 32Gi
     - name: helper
       image: quay.io/wangzheng422/debug-pod:alma-9.3
       securityContext:
