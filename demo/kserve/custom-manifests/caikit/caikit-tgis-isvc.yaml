@@ -14,7 +14,8 @@ spec:
         name: caikit
       runtime: caikit-tgis-runtime
       # storageUri: http://admin:password@minio.minio.svc.cluster.local:9000/minio/download/modelmesh-example-models/llm/models/flan-t5-small-caikit/ # single model here
-      storageUri: s3://modelmesh-example-models/llm/models/flan-t5-small-caikit # single model here
+      # storageUri: s3://modelmesh-example-models/llm/models/flan-t5-small-caikit # single model here
+      storageUri: s3://modelmesh-example-models/Llama-2-7b-chat-hf
       # storageUri: proto://path/to/model # single model here
       # Example, using a pvc:
       # storageUri: pvc://caikit-pvc/flan-t5-small-caikit/
